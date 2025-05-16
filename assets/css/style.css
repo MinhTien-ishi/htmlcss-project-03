@@ -469,7 +469,7 @@ a {
     margin-top: 70px;
 }
 
-.member-item:hover .member-item__thumb {
+.member-item:hover .member-item__img {
     transform: scale(1.1);
 }
 
@@ -480,7 +480,7 @@ a {
     overflow: hidden;
 }
 
-.member-item__thumb {
+.member-item__img {
     display: block;
     max-width: 100%;
     height: 290px;
@@ -585,27 +585,40 @@ a {
     column-gap: 30px;
 }
 
-.news__item {
+.news-item {
     flex: 1;
     overflow: hidden;
     border-radius: 12px;
     transition: 0.25s;
 }
 
-.news__item:hover {
+.news-item:hover {
     box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
-    transform: translateY(-2px);
 }
 
-.news__item:hover .news-item__body {
+.news-item:hover .news-item__img {
+    transform: scale(1.1);
+}
+
+.news-item:hover .news-item__body {
     border-color: #fff;
 }
 
+.news-item:hover .news-item__more {
+    color: #2e80ce;
+}
+
 .news-item__thumb {
+    height: 172px;
+    overflow: hidden;
+}
+
+.news-item__img {
     display: block;
     width: 100%;
-    height: 172px;
+    height: 100%;
     object-fit: cover;
+    transition: 0.25s;
 }
 
 .news-item__body {
@@ -637,4 +650,40 @@ a {
     font-weight: 400;
     color: #10375c;
     font-size: 1.4rem;
+}
+
+/*  Appointment */
+.appointment {
+    margin: 85px 0 170px;
+}
+
+.appointment__inner {
+    padding: 100px 70px;
+    border-radius: 4px;
+    background: #f6fbff;
+    text-align: center;
+}
+
+.appointment__heading {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.appointment__heading::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: inline-block;
+    content: "";
+    width: 136px;
+    height: 2px;
+    background: #2e80ce;
+}
+
+.appointment__desc {
+    max-width: 617px;
+    margin: 18px auto 38px;
+    font-size: 1.6rem;
 }
